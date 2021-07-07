@@ -19,6 +19,21 @@ zipkin server start on so and so port.
  
  Please verify in department and user service with port.
  
+ For Configuration Server you need to create one repository in github
+ Goto https://github.com/ and login if not logged in.
+ Then Goto new Repository and create new file with name application.yml
+ 
+ please paste below content in file
+ 
+ eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+ 
 
 First Open all projects in IDE.
 Then start in below sequence
